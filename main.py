@@ -30,6 +30,10 @@ resources = {
     "coffee": 100,
 }
 
+profit = 0
+
+is_on = True
+
 def is_resources_sufficient(order_ingredients) :
     """ Return True if there are sufficient resources to make coffee, otherwise returns False. """
     for ingredient in order_ingredients : 
@@ -63,10 +67,6 @@ def make_coffee(drink_name, order_ingredients) :
     for ingredient in order_ingredients : 
         resources[ingredient] -= order_ingredients[ingredient]
     print(f"Here is your {drink_name}")
-
-profit = 0
-
-is_on = True
 
 while is_on : 
     choice = input("What would you like? (espresso/latte/cappuccino): ")
